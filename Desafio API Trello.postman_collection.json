@@ -1,0 +1,64 @@
+{
+  "info": {
+    "_postman_id": "f56febab-1952-4968-8855-3be528973f2a",
+    "name": "Desafio API Trello",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "_exporter_id": "43594059"
+  },
+  "item": [
+    {
+      "name": "https://api.trello.com/1/actions/592f11060f95a3d3d46a987a",
+      "event": [
+        {
+          "listen": "test",
+          "script": {
+            "exec": [
+              "// ✅ Status code\r",
+              "pm.test(\"Status code é 200\", function () {\r",
+              "    pm.response.to.have.status(200);\r",
+              "});\r",
+              "\r",
+              "// Converter resposta\r",
+              "let response = pm.response.json();\r",
+              "\r",
+              "// Exibir no console\r",
+              "console.log(\"Nome da lista:\", response.data.list.name);\r",
+              "\r",
+              "// ✅ Validar que existe\r",
+              "pm.test(\"Campo list.name existe\", function () {\r",
+              "    pm.expect(response.data.list.name).to.not.be.undefined;\r",
+              "});\r",
+              "\r",
+              "// ✅ Validar valor correto\r",
+              "pm.test(\"Nome da lista é Professional\", function () {\r",
+              "    pm.expect(response.data.list.name).to.eql(\"Professional\");\r",
+              "});"
+            ],
+            "type": "text/javascript",
+            "packages": {},
+            "requests": {}
+          }
+        }
+      ],
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "https://api.trello.com/1/actions/592f11060f95a3d3d46a987a",
+          "protocol": "https",
+          "host": [
+            "api",
+            "trello",
+            "com"
+          ],
+          "path": [
+            "1",
+            "actions",
+            "592f11060f95a3d3d46a987a"
+          ]
+        }
+      },
+      "response": []
+    }
+  ]
+}
