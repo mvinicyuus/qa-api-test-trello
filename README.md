@@ -1,26 +1,26 @@
-- API Trello
+## API Trello
 
-- Objetivo
+## Objetivo
 Realizar um GET na API do Trello e validar:
 - Status code 200
 - Campo data.list.name
 - Valor esperado: "Professional"
 
-- Endpoint
+## Endpoint
 https://api.trello.com/1/actions/592f11060f95a3d3d46a987a
 
--  Ferramenta
+## Ferramenta
 Postman
 
-- Testes realizados
+##Testes realizados
 
 - Validação de status code
 - Validação de campo existente
 - Validação de valor esperado
 
--  Script de teste
+## Script de teste
 
-código usado em testes
+## código usado em testes
 pm.test("Status code é 200", function () {
     pm.response.to.have.status(200);
 });
