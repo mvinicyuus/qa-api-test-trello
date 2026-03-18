@@ -1,2 +1,36 @@
-# qa-api-test-trello
-Teste de API utilizando Postman com requisição GET na API do Trello, validação de status code 200 e verificação do campo data.list.name.
+# 🧪 Desafio QA - API Trello
+
+## 📌 Objetivo
+Realizar um GET na API do Trello e validar:
+- Status code 200
+- Campo data.list.name
+- Valor esperado: "Professional"
+
+## 🔗 Endpoint
+https://api.trello.com/1/actions/592f11060f95a3d3d46a987a
+
+## 🛠 Ferramenta
+Postman
+
+## ✅ Testes realizados
+
+- Validação de status code
+- Validação de campo existente
+- Validação de valor esperado
+
+## 📜 Script de teste
+
+```javascript
+pm.test("Status code é 200", function () {
+    pm.response.to.have.status(200);
+});
+
+let response = pm.response.json();
+
+pm.test("Campo list.name existe", function () {
+    pm.expect(response.data.list.name).to.not.be.undefined;
+});
+
+pm.test("Nome da lista é Professional", function () {
+    pm.expect(response.data.list.name).to.eql("Professional");
+});
