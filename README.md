@@ -20,9 +20,9 @@ Postman
 
 ## Collection do Postman
 
-Você pode importar a collection utilizada neste projeto:
+A collection pode ser importada diretamente no Postman:
 
-[⬇️ Baixar Collection](./Desafio%20API%20Trello.postman_collection.json)
+[⬇️ Baixar Collection](./desafio-api-trello.postman_collection.json)
 
 ## Script de teste
 
