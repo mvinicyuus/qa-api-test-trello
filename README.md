@@ -18,11 +18,7 @@ Postman
 - Validação de campo existente
 - Validação de valor esperado
 
-## Collection do Postman
-
-A collection pode ser importada diretamente no Postman:
-
-[⬇️ Baixar Collection](./desafio-api-trello.postman_collection.json)
+## Collection do Postman em anexo
 
 ## Script de teste
 
