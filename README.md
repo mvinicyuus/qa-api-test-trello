@@ -15,11 +15,15 @@ Postman
 
 ---
 
-### ✅ Validações realizadas
+### ✅ BDD
 
-- Verificação do status code (esperado: 200)
-- Validação da existência do campo `data.list.name`
-- Validação do valor retornado (esperado: `"Professional"`)
+Feature: Trello API
+
+  Scenario: Validar retorno da API do Trello
+
+    Given I send a GET request to the Trello API
+    Then the response status should be 200
+    And the list name should be "Professional"
 
 ---
 
